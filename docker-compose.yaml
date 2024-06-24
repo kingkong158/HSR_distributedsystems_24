@@ -6,6 +6,8 @@ services:
       - "8081:8081"
     networks:
       - todo-network
+    environment:
+      - BACKEND_URL=todo-backend
 
   todo-backend:
     image: cagritasci/hsr_distributedsystems_24_todo_backend:0.1 
@@ -15,6 +17,8 @@ services:
       - todo-network
     depends_on:
       - todo-database
+    environment:
+      - DATABASE_URL=todo-database
 
   todo-database:
     image: cagritasci/hsr_distributedsystems_24_todo_database:0.1 
