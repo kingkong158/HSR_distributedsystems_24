@@ -161,7 +161,8 @@ starten und anschließen lassen sich ```kubectl``` befehle ausführen.
 Zusammenfassung der grundlegenden Design Prinzipien bei der Entwicklung von Cloud nativen Anwendungen.
 
 ### Was sind Staging Konzepte?
-![image](https://github.com/StraysWonderland/HSR_distributedsystems_24/assets/22505258/9922f3ac-1299-4ca8-916c-b2f306d47b59)
+![image](https://github.com/StraysWonderland/HSR_distributedsystems_24/assets/22505258/fed1a45a-7b01-4928-ad88-e743dde0ec28)
+
 
 ### Review Questions
 - Was sind 12 Faktor Apps
