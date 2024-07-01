@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import de.pan.todofrontend.model.TodoItem;
+import de.pan.todofrontend.model.Fusballkarten;
 
 @FeignClient(value = "backendService", url = "http://" + "${BACKEND_URL:localhost}" + ":8080/")
 public interface BackendService {
     @RequestMapping(method = RequestMethod.GET, value = "/todo")
-    List<TodoItem> getTodoItems();
+    List<Fusballkarten> getFusballkarten();
 
     @RequestMapping(method = RequestMethod.POST, value = "/todo")
-    TodoItem createTodoItem(@RequestBody TodoItem todoItem);
+    Fusballkarten createFusballkarten(@RequestBody Fusballkarten fusballkarten);
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Fusballkarten-ui</title>
+</head>
+
+<body>
+    <h1>Fusballkarten</h1>
+
+    <form action="#" th:action="@{/todos}" th:object="${todo}" method="post">
+        <table border="1">
+            <tr>
+                <td><label>Spielername</label></td>
+                <td><input type="text" th:field="*{spielername}" /></td>
+            </tr>
+            <tr>
+                <td><label>Manschaft</label></td>
+                <td><input type="text" th:field="*{manschaft}" /></td>
+            </tr>
+            <tr>
+                <td><label>Position</label></td>
+                <td><input type="text" th:field="*{position}" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </form>
+
+    <br>
+
+    <table border="1">
+        <tr th:each="todo: ${todos}">
+            <td th:text="${todo.spielername}" />
+            <td th:text="${todo.manschaft}" />
+            <td th:text="${todo.position}" />
+        </tr>
+    </table>
+</body>
+
+</html>
