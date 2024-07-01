@@ -1,6 +1,6 @@
-CREATE SEQUENCE fusballspieler_karte_seq START 1;
+CREATE SEQUENCE fusballspielerKarte_seq START 1;
 
-CREATE TABLE IF NOT EXISTS fusballspielerKarte (
+CREATE TABLE fusballspielerKarte (
     karten_nr SERIAL PRIMARY KEY,
     spielername VARCHAR(50) NOT NULL,
     manschaft VARCHAR(50) NOT NULL,
