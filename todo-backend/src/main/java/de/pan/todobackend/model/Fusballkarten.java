@@ -7,11 +7,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "fusballspielerKarte")
+@Table(name = "fusballspieler_karte")
 public class Fusballkarten {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int kartenNr;
     private String spielername;
     private String manschaft;
     private String position;
@@ -20,20 +20,20 @@ public class Fusballkarten {
     public Fusballkarten() {
     }
 
-    public Fusballkarten(int id, String spielername, String manschaft, String position, int marktwert) {
-        this.id = id;
+    public Fusballkarten(int kartenNr, String spielername, String manschaft, String position, int marktwert) {
+        this.kartenNr = kartenNr;
         this.spielername = spielername;
         this.manschaft = manschaft;
         this.position = position;
         this.marktwert = marktwert;
     }
 
-    public int getId() {
-        return id;
+    public int getKartenNr() {
+        return kartenNr;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setKartenNr(int kartenNr) {
+        this.kartenNr = kartenNr;
     }
 
     public String getSpielername() {
